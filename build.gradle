@@ -22,6 +22,27 @@ dependencies {
     modImplementation "dev.emi:trinkets:3.10.0"
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs = ['.']
+            include '*.java'
+        }
+    }
+}
+
+processResources {
+    from('.') { include 'fabric.mod.json', 'sandevistan.mixins.json' }
+    from('.') { include 'en_us.json', 'ru_ru.json'; into 'assets/sandevistan/lang' }
+    from('.') { include 'sandevistan.json'; into 'assets/sandevistan/models/item' }
+    from('.') { include 'sandevistan.png'; into 'assets/sandevistan/textures/item' }
+    from('sandevistan (1).png') {
+        rename { 'sandevistan.png' }
+        into 'assets/sandevistan/textures/mob_effect'
+    }
+    from('.') { include 'necklace.json'; into 'data/trinkets/tags/item/chest' }
+}
+
 tasks.withType(JavaCompile).configureEach {
     options.release = 21
 }
