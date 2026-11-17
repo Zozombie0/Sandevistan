@@ -2,6 +2,7 @@
   "required": true,
   "package": "com.example.sandevistan.mixin",
   "compatibilityLevel": "JAVA_21",
+  "refmap": "sandevistan-refmap.json",
   "mixins": ["WorldMixin"],
   "injectors": { "defaultRequire": 1 }
 }
