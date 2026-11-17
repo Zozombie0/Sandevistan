@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sandevistan",
+  "version": "1.0.0",
+  "name": "Sandevistan Addon",
+  "description": "Addon for Artifacts: adds the Sandevistan necklace.",
+  "authors": ["You"],
+  "license": "MIT",
+  "icon": "assets/sandevistan/textures/item/sandevistan.png",
+  "environment": "*",
+  "entrypoints": { "main": ["com.example.sandevistan.SandevistanMod"] },
+  "mixins": ["sandevistan.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "trinkets": "*",
+    "artifacts": "*"
+  }
+}
